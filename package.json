@@ -1,5 +1,5 @@
 {
-  "name": "isomorphic-webcrypto",
+  "name": "@futpib/isomorphic-webcrypto",
   "version": "1.6.0",
   "description": "webcrypto library for Node, React Native and IE11+",
   "main": "./src/main.js",

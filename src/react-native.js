@@ -1,11 +1,9 @@
 let generateSecureRandom;
-if (require.getModules) {
-  const NativeModules = require('react-native').NativeModules;
-  const RNSecureRandom = NativeModules.RNSecureRandom;
-  if (RNSecureRandom && RNSecureRandom.generateSecureRandomAsBase64) {
-    generateSecureRandom = require('react-native-securerandom').generateSecureRandom;
-  }
-} 
+const NativeModules = require('react-native').NativeModules;
+const RNSecureRandom = NativeModules.RNSecureRandom;
+if (RNSecureRandom && RNSecureRandom.generateSecureRandomAsBase64) {
+  generateSecureRandom = require('react-native-securerandom').generateSecureRandom;
+}
 
 if (!generateSecureRandom) {
   console.log(`
